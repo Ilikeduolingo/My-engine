@@ -1,16 +1,17 @@
+from Log import *
 class Game:
     def __init__(self, screen):
         self.screen = screen
-        print('game is initiated')
+        Log.log('game is initiated')
     def Update(self, Deltatime):
-        print('UPDATE')
+        Log.log('UPDATE')
         pass
     def Render(self):
-        print('RENDER')
+        Log.log('RENDER')
         pass
     def LoadAssets(self):
-        print('LOADASSETS')
+        Log.log('LOADASSETS')
         pass
     def Onquit(self):
-        print('ONQUIT')
+        Log.log('ONQUIT')
         pass
