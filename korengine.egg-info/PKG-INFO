@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: korengine
+Version: 0.1.0
+Summary: Kor engine on top
+Author: skib
+Author-email: whalemate853@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
