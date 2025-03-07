@@ -1,11 +1,14 @@
 from Game_class import *
 import pygame
 import time
+from Log import *
 from Global_options import *
 class Core:
     game_instace = None
     @staticmethod
     def Start(game:Game):
+        Log.log('Pygame initialised skibidi')
+
         game_instsance = game
         game_instsance.LoadAssets()
         clock = pygame.time.Clock() #frames per tick
