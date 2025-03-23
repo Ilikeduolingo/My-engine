@@ -1,11 +1,12 @@
 #This class represents and entity in the game engine
 from Log import *
 class Entity: 
-    def __init__(self):
+    def __init__(self, name):
+        self.name = name
         pass
 
     def Update(self, DeltaTime):
-        Log.log("Updating entity")
+        Log.log(f"Updating entity {self.name}")
         pass
 
     def Render(self):

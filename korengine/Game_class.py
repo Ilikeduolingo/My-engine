@@ -8,7 +8,7 @@ class Game:
         Log.log('game is initiated')
         self.allEntities: List[Entity] = []
 
-        test = Entity()
+        test = Entity('Matt Mcnally')
         self.AddEntity(test)
 
 
