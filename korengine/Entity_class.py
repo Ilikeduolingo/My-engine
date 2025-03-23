@@ -3,7 +3,6 @@ from Log import *
 class Entity: 
     def __init__(self, name):
         self.name = name
-
         pass
 
     def Update(self, DeltaTime):
