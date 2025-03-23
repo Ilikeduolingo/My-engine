@@ -1,6 +1,8 @@
 from typing import List
 from Log import *
 from Entity_class import Entity
+from Player import Player
+import pygame
 
 class Game:
     def __init__(self, screen):
@@ -8,10 +10,8 @@ class Game:
         Log.log('game is initiated')
         self.allEntities: List[Entity] = []
 
-        test = Entity('Matt Mcnally')
-        self.AddEntity(test)
 
-        self.AddEntity(Entity("player"))
+        
 
 
     def AddEntity(self, ent):
@@ -25,10 +25,12 @@ class Game:
     
     def Render(self):
          for e in self.allEntities:
-            e.Render()
+            e.Render(self.screen)
 
     def LoadAssets(self):
-        Log.log('LOADASSETS')
+        
+        smileyImage = pygame.image.load("korengine\\Assets\\smiley.png")
+        self.AddEntity(Player("player", (0,0), smileyImage))
         pass
     def Onquit(self):
         Log.log('ONQUIT')
