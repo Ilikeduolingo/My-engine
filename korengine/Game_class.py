@@ -8,22 +8,25 @@ class Game:
         Log.log('game is initiated')
         self.allEntities: List[Entity] = []
 
-        test = Entity()
+        test = Entity("Matt mcnilly")
         self.AddEntity(test)
+
+        self.AddEntity(Entity("player"))
 
 
     def AddEntity(self, ent):
         self.allEntities.append(ent)
+
     def Update(self, Deltatime):
-        Log.log('UPDATE')
         
         for e in self.allEntities:
             e.Update(Deltatime)
 
-        pass
+    
     def Render(self):
-        Log.log('RENDER')
-        pass
+         for e in self.allEntities:
+            e.Render()
+
     def LoadAssets(self):
         Log.log('LOADASSETS')
         pass
