@@ -24,6 +24,7 @@ class Game:
 
     
     def Render(self):
+         self.screen.fill((0,0,0))
          for e in self.allEntities:
             e.Render(self.screen)
 
