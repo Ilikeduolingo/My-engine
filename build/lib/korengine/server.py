@@ -19,6 +19,8 @@ async def handle_client(reader, writer):
             if not data:
                 break  # Connection was closed by the client
             message = data.decode()
+            print(f"Received from {address}: {message}")
+            
             # Assuming the message is in the format "player_name,x_position,y_position"
             try:
                 # Split the message into components
@@ -38,6 +40,8 @@ async def handle_client(reader, writer):
             except Exception as e:
                 print(f"Error processing client data: {e}")
             
+            # Send an acknowledgment to the client
+            writer.write("Message received".encode())
             await writer.drain()
 
     except Exception as e:

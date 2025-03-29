@@ -1,4 +1,5 @@
 from typing import List
+from korengine.EntityData import EntityData
 from korengine.Log import *
 from korengine.Entity_class import Entity
 import pygame
@@ -10,9 +11,6 @@ class Game:
         self.allEntities: List[Entity] = []
 
 
-        
-
-
     def AddEntity(self, ent):
         self.allEntities.append(ent)
 
@@ -21,9 +19,14 @@ class Game:
         for e in self.allEntities:
             e.Update(Deltatime)
 
-    
+    def OnServerDataReceived(self, entities_data: List):
+        pass
+
+    def OnClientDataReceived(self, entityData: EntityData):
+        pass
+
     def Render(self):
-         self.screen.fill((0, 0, 0))
+         self.screen.fill((0,0,0))
          for e in self.allEntities:
             e.Render(self.screen)
 
