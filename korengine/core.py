@@ -1,8 +1,8 @@
-from Game_class import *
+from korengine.Game_class import *
 import pygame
 import time
-from Log import *
-from Global_options import *
+from korengine.Log import *
+from korengine.Global_options import *
 class Core:
     game_instace = None
     @staticmethod
@@ -10,7 +10,6 @@ class Core:
         Log.log('Pygame initialised')
 
         game_instsance = game
-        game_instsance.LoadAssets()
         clock = pygame.time.Clock() #frames per tick
         running = True
         Log.log('created game instance ')

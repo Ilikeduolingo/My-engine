@@ -1,13 +1,15 @@
-from Game_class import *
+from korengine.Game_class import *
 import pygame
 import time
-from Global_options import *
+from korengine.Log import *
+from korengine.Global_options import *
 class Core:
     game_instace = None
     @staticmethod
     def Start(game:Game):
+        Log.log('Pygame initialised')
+
         game_instsance = game
-        game_instsance.LoadAssets()
         clock = pygame.time.Clock() #frames per tick
         running = True
         Log.log('created game instance ')
@@ -23,7 +25,6 @@ class Core:
             game.Render()
             end_time = time.time()
             diff = end_time-start_time
-            Log.log(f'skbidi toilet loves {dt}')
             #print(1/diff)
             pygame.display.flip()
         game.Onquit()

@@ -1,7 +1,6 @@
 from typing import List
-from Log import *
-from Entity_class import Entity
-from Player import Player
+from korengine.Log import *
+from korengine.Entity_class import Entity
 import pygame
 
 class Game:
@@ -26,10 +25,7 @@ class Game:
             e.Render(self.screen)
 
     def LoadAssets(self):
-        
-        smileyImage = pygame.image.load("korengine\\Assets\\smiley.png")
-        self.AddEntity(Player("player", (0,0), smileyImage))
-        pass
+        Log.log('Loading da assets')
     def Onquit(self):
         Log.log('ONQUIT')
         pass
