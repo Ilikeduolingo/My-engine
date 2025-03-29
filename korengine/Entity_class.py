@@ -1,7 +1,7 @@
 import pygame
 
 #This class represents and entity in the game engine
-from Log import *
+from korengine.Log import *
 class Entity: 
     def __init__(self, name, position:pygame.Vector2 = (0,0), image: pygame.Surface = None):
         self.name = name
