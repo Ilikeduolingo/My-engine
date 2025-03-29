@@ -11,9 +11,6 @@ class Game:
         self.allEntities: List[Entity] = []
 
 
-        
-
-
     def AddEntity(self, ent):
         self.allEntities.append(ent)
 
